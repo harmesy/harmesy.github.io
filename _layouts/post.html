@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<article>
+  <h1>{{ page.title }}</h1>
+  <small>Posted on {{ page.date | date_to_string }}</small>
+
+  <p class="post-content">
+    {{ content }}
+  </p>
+</article>
+
+<a href="javascript:window.history.back()">&lt;&lt; Back</a>
