@@ -13,29 +13,39 @@ a {
  color: #404848;
 }
 
-/* Header details */
+/* Header and Nav details */
 
-header {
+header, nav {
   font-size: 1.6em;
   border-bottom: 1px solid #bed1d1;
   background: rgb(224, 224, 224);
 }
 
-header h1.logo {
-  text-align: center;
-  display: block;
-  font-family: 'Roboto Slab', serif;
-  font-weight: 300;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-
-header h1.logo a {
+h1.logo a {
   color: #252828;
 }
 
-header h1.logo a:hover, header p.email a:hover {
+h1.logo a:hover, p.email a:hover {
   text-shadow: 1px 1px 1px #bed1d1;
+}
+
+h1.logo a, p.email a {
+  text-decoration: none;
+}
+
+p.email a {
+  color: #343939;
+}
+
+/* Header details */
+
+header h1.logo {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding-top: 40px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
 }
 
 header p.email {
@@ -45,12 +55,26 @@ header p.email {
   font-weight: 100;
 }
 
-header p.email a {
-  color: #343939;
+/* Nav details */
+nav {
+  width: 100%;
+  font-size: 1em;
+  opacity: .8;
+  display: hidden;
 }
 
-header h1.logo a, header p.email a {
-  text-decoration: none;
+nav h1.logo, nav p.email {
+  margin: 16px;
+}
+
+nav h1.logo {
+  float: left;
+  font-size: 1em;
+}
+
+nav p.email {
+  float: right;
+  text-align: right;
 }
 
 /* Post details */
