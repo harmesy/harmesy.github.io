@@ -1,0 +1,8 @@
+#Machforms uploaded file vunerability#
+##Files uploaded to duplicated forms are open to the world##
+Machforms stores uploaded files to the `data/form_<form_id>/files/` directory. 
+**This directory is by default served, as it is simply a subdirectory from the public facing portion of the product, there is no access control provided.**
+
+Instead Machforms calls this line `@file_put_contents($mf_settings['upload_dir']."/form_{$form_id}/files/index.html",' '); //write empty index.html` in the file `save_form.php` when saving a new form. This puts an index.html file in the form `files` directory, to prevent the directory contents from being listed. It simply hides the file, relying on the fact that a seemingly random string is prepended to the filename when it is uploaded, to prevent a malicious user from guessing the name of the file he wants.
+
+This "security through obfuscation" is generally bad enough. But things get worse when you duplicate a form. Apparently the line from `save_form.php` that I mentioned above is never called when duplicating. You can find the equivalent code that is called when duplicating in `duplicate_form.php`. Lines 303-317 are the ones we're interested in. As you can see, unlike in the `save_form.php` file, the `index.html` file is never created. All an attacker has to do is grab the form ID when they view the public form (`/view.php?id=11378` for example) and visit `/data/form_<form_id>/files/` to get a directory listing of all uploaded files.

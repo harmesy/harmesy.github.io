@@ -67,6 +67,10 @@ article.post h2 a {
   text-decoration: none;
 }
 
+article.post small {
+  display: block;
+}
+
 article.post small, div.read-more a, div.go-back a {
   color: #7e8c8c;
 }
