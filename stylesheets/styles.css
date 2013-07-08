@@ -6,7 +6,7 @@ body {
   line-height: 1.8em;
   letter-spacing: 1.4em;
   margin-bottom: 80px;
-  background: url(/images/fabric_1.png);
+  background: url("/images/fabric_1.png") rgb(224, 224, 224);
 }
 
 a {
