@@ -1,10 +1,11 @@
 body {
   font-family: 'Raleway', serif;
   font-weight: 400;
-  color: #1e2222;
+  color: #000;
   border-top: 4px solid #849696;
-  line-height: 1.5em;
-  letter-spacing: 1.2em;
+  line-height: 1.8em;
+  letter-spacing: 1.4em;
+  margin-bottom: 80px;
 }
 
 a {
@@ -56,7 +57,7 @@ div.posts-listing, div.post-container {
 }
 
 article.post {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 article.post h2 {
@@ -73,6 +74,16 @@ article.post small {
 
 article.post small, div.read-more a, div.go-back a {
   color: #7e8c8c;
+}
+
+article.post img {
+  box-shadow: 0 0 15px 5px #999;
+  margin: 60px auto;
+  display: block;
+}
+
+article.post p {
+  margin: 20px 0;
 }
 
 div.read-more {
