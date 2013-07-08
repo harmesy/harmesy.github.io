@@ -6,6 +6,7 @@ body {
   line-height: 1.8em;
   letter-spacing: 1.4em;
   margin-bottom: 80px;
+  background: url(/images/fabric_1.png);
 }
 
 a {
@@ -17,6 +18,7 @@ a {
 header {
   font-size: 1.6em;
   border-bottom: 1px solid #bed1d1;
+  background: rgb(224, 224, 224);
 }
 
 header h1.logo {
@@ -24,6 +26,8 @@ header h1.logo {
   display: block;
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
+  margin: 0 auto;
+  padding-top: 40px;
 }
 
 header h1.logo a {
