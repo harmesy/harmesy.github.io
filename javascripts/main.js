@@ -1,3 +1,5 @@
+/* Copyright (C) 2013 Matt Harmes <matt@harmes.ca> */
+
 (function($) {
   'use strict';
 
