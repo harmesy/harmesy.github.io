@@ -15,11 +15,13 @@
   <body>
     {% include header.html %}
 
-    <div id="sidebar" class="col-md-3">
-      {% include sidebar.html %}
-    </div>
-    <div id="content" class="col-md-7 col-md-offset-4">
-      {{ content }}
+    <div id="wrapper" class="row">
+      <div id="sidebar" class="col-md-3 fixed-sidebar">
+        {% include sidebar.html %}
+      </div>
+      <div id="content" class="col-md-7 col-md-offset-4">
+        {{ content }}
+      </div>
     </div>
           
     {% include footer.html %}

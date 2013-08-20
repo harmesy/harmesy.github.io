@@ -9,8 +9,6 @@
 
 #sidebar {
   text-align: center;
-  margin-top: 100px;
-  position: fixed;
 }
 
 #personal-blurb {
@@ -26,6 +24,7 @@
 #content {
   margin-top: 40px;
   margin-bottom: 40px;
+  padding: 0 40px;
 }
 
 #content h2 a {
@@ -36,4 +35,12 @@
 #content h2 a:hover {
   color: #c7254e;
   text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  .fixed-sidebar {
+    margin-top: 100px;
+    position: fixed;
+    padding: 0 10px;
+  }
 }
