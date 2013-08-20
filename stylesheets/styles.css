@@ -31,7 +31,6 @@
 
 #content {
   margin-top: 40px;
-  margin-bottom: 40px;
 }
 
 #content h2 a {
@@ -52,5 +51,5 @@
 }
 
 .post {
-  margin: 40px;
+  margin: 40px 0;
 }
