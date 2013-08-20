@@ -2,17 +2,11 @@
 layout: default
 ---
 
-<div class="pure-u-3-5 post-container">
-  <article class="post">
-    <h2>{{ page.title }}</h2>
-    <small>Posted on {{ page.date | date_to_string }}</small>
+<article class="post">
+  <h2>{{ page.title }}</h2>
+  <small>Posted on {{ page.date | date_to_string }}</small>
 
-    <p class="post-content">
-      {{ content }}
-    </p>
-  </article>
-
-  <div class="go-back">
-    <a href="javascript:window.history.back()">&lt;&lt; Back</a>
-  </div>
-</div>
+  <p class="post-content">
+    {{ content }}
+  </p>
+</article>

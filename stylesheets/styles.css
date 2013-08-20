@@ -11,14 +11,22 @@
   text-align: center;
 }
 
+#sidebar a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #personal-blurb {
   padding: 10px;
 }
 
 #social-links a {
-  text-decoration: none;
-  color: inherit;
-  padding: 0 4px;
+  padding: 0 8px;
+  transition: opacity 400ms ease;
+}
+
+#social-links a:hover {
+  opacity: .8;
 }
 
 #content {
@@ -43,4 +51,8 @@
     position: fixed;
     padding: 0 10px;
   }
+}
+
+.post {
+  margin-bottom: 40px;
 }
