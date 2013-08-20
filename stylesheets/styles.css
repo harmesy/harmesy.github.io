@@ -17,11 +17,11 @@
 }
 
 #personal-blurb {
-  padding: 10px;
+  margin: 10px;
 }
 
 #social-links a {
-  padding: 0 8px;
+  margin: 0 8px;
   transition: opacity 400ms ease;
 }
 
@@ -32,7 +32,6 @@
 #content {
   margin-top: 40px;
   margin-bottom: 40px;
-  padding: 0 40px;
 }
 
 #content h2 a {
@@ -49,10 +48,9 @@
   .fixed-sidebar {
     margin-top: 100px;
     position: fixed;
-    padding: 0 10px;
   }
 }
 
 .post {
-  margin-bottom: 40px;
+  margin: 40px;
 }
