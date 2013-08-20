@@ -16,8 +16,6 @@
       
       if(options.callback) {
         options.callback(percent);
-      } else {
-        console.log(percent);
       }
     }
 
