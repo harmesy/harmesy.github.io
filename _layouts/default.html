@@ -1,45 +1,63 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>{{ page.title }}</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Roboto:400,100|Raleway:300,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ site.url }}/stylesheets/styles.css">
     <link rel="stylesheet" href="{{ site.url }}/stylesheets/pygment_trac.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="{{ site.url }}/javascripts/scale.fix.js"></script>
-    <script src="{{ site.url }}/javascripts/main.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="G2u1K51oWs41-r5888wy9JDg91EF54JOekcIiwhA-ks" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <body>
     {% include header.html %}
-    
-    <div class="pure-g-r content-wrapper">
+
+    <div id="sidebar" class="col-md-3">
+      {% include sidebar.html %}
+    </div>
+    <div id="content" class="col-md-9 col-md-offset-3">
       {{ content }}
     </div>
           
     {% include footer.html %}
 
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-      <script type="text/javascript">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="{{ site.url }}/javascripts/jquery.percentread.js"></script>
+    <script src="{{ site.url }}/javascripts/jquery.morphingbar.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var progress_bar = $('#progress-bar');
+        progress_bar.morphingBar('aria-valuenow');
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-40964521-1']);
-        _gaq.push(['_trackPageview']);
+        $.percentRead({
+          callback: function(percent_read) {
+            updateProgressBar(percent_read);
+            progress_bar.trigger('morphingBar.updated');
+          }
+        });
 
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+        function updateProgressBar(percent) {
+          progress_bar.attr('aria-valuenow', percent);
+          progress_bar.css('width', percent + '%');
+        }
+      });
+    </script>
+    <script type="text/javascript">
 
-      </script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-40964521-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
   </body>
 </html>
