@@ -5,7 +5,7 @@ title: Promises, Deferrals, and a headache
 
 <p class="lead">The following will be using the jQuery version of promises.</p>
 
-I am in the process of trying to improve my async js coding abilities, and as a part of that process I'm trying to wrap my feeble mind around using promises. One area that had be confused was the use of `then` (or the depretiated `pipe` in older documentation).
+I am in the process of trying to improve my async js coding abilities, and as a part of that process I'm trying to wrap my feeble mind around using promises. One area that had be confused was the use of `then` (or the depreciated `pipe` in older documentation).
 
 The regular example I've seen is this scenario: You are making one ajax call to a resource that basically sets up a subsequent ajax call to another resource. So for example.
 
@@ -38,7 +38,7 @@ Well unfortunately this doesn't work at all. Because `.done` doesn't return what
 
 So (I believe) all you'd be doing in the second example is adding another `done` callback for the `.get` call. So `second_call.done` wouldn't be executed when `$.post` succeeded, it would be executed when `$.get` succeeded, because we're still pointing at the `first_call` deferred object.
 
-Since what we really want is promise chaining we use `then` (I still see `pipe` mentioned, but it has been [depretiated](http://api.jquery.com/deferred.pipe/ "jQuery API Docs") as of jQuery 1.8, with `then` being the replacement).
+Since what we really want is promise chaining we use `then` (I still see `pipe` mentioned, but it has been [depreciated](http://api.jquery.com/deferred.pipe/ "jQuery API Docs") as of jQuery 1.8, with `then` being the replacement).
 
 From the jQuery docs:
 
@@ -60,4 +60,4 @@ second_call.done(function() {
 
 So now, when `$.get` succeeds our callback in `first_call.then` is executed, which makes the `$.post` call, and returns its promise. When that succeeds our `second_call.done` callback is executed. So we have successfully chained our lookups.
 
-I know this all seems very basic, but being new to promises and deferrals and all that fun stuff can be a bit of a mindwarping experience. At times you're essentially writing code that is looking into the future, a concept that I admit sometimes feels difficult to grasp.
+I know this all seems very basic, but being new to promises and deferrals and all that fun stuff can be a bit of a mind-warping experience. At times you're essentially writing code that is looking into the future, a concept that I admit sometimes feels difficult to grasp.
