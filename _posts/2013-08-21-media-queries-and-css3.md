@@ -11,7 +11,7 @@ When I was designing this site I knew I wanted to have a sidebar that was basica
 }
 {% endhighlight %}
 
-Since the sidebar no longer boxed properly I then added padding to the main content to push it past the sidebar (on bootstrap, which I am using it's as simple as applying the `col-md-offset-4` class). Now everything looks nice and pretty. The content sits next to the sidebar, the sidebar is locked in place, everything good right?
+Since the sidebar no longer boxed properly I then added a left margin to the main content to push it past the sidebar (on bootstrap, which I am using it's as simple as applying the `col-md-offset-4` class). Now everything looks nice and pretty. The content sits next to the sidebar, the sidebar is locked in place, everything good right?
 
 Here's the problem, if you then open it up on a smaller device, say, an iPhone, all of a sudden the sidebar is sitting on top of the main content. The reason is simple, when the content shrinks down bootstrap, like most other CSS frameworks, start to stack content vertically so that everything will fit on the narrow screen without having to scroll back and forth. So the content is no longer "offset" from the sidebar, and since the sidebar has been positioned with `position: fixed;` the sidebar now flows over the main content.
 
