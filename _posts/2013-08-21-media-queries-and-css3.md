@@ -1,6 +1,6 @@
 ---
 layout: post
-title: @media queries and CSS3
+title: media queries and CSS3
 ---
 
 When I was designing this site I knew I wanted to have a sidebar that was basically locked in place. So that the sidebar wouldn't move, while the rest of the content scrolled. This was pretty easy to implement:
