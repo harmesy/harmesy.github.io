@@ -29,6 +29,15 @@
   opacity: .8;
 }
 
+#gpg-key {
+  margin-top: 20px;
+}
+
+#gpg-key a {
+  color: #73152e;
+  transition: color 400ms ease;
+}
+
 #content {
   margin-top: 40px;
 }
@@ -38,7 +47,7 @@
   transition: color 400ms ease;
 }
 
-#content h2 a:hover {
+#content h2 a:hover, #gpg-key a:hover {
   color: #c7254e;
   text-decoration: none;
 }
