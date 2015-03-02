@@ -2,7 +2,6 @@
 layout: post
 title: Electronic Signatures and Separation Agreements
 ---
-##Electronic Signatures and Separation Agreements##
 Electronic communication seems to become more and more pervasive in our personal lives by each passing day. We are now accustomed to purchasing goods and services online, searching and applying for jobs online, dating online, and perhaps we can start separating online.
 
 In Ontario, separation agreements, and all other "domestic contracts" are provided for by the [Family Law Act](http://canlii.ca/t/2d8). Pursuant to [section 55](http://canlii.ca/t/529dh#sec55subsec1) all domestic contracts (or agreements to amend or rescind) are unenforceable unless made in writing, signed by the parties, and witnessed.
