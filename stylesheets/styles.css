@@ -43,6 +43,15 @@
   text-decoration: none;
 }
 
+#content img {
+  padding: 4px;
+  border: 1px solid rgba(201, 225, 235, 0.6);
+  background: rgba(201, 225, 235, 0.3);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (min-width: 992px) {
   .fixed-sidebar {
     padding-top: 100px;
