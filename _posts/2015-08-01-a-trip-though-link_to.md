@@ -14,7 +14,7 @@ The first method we're going to follow is ["link_to"](http://api.rubyonrails.org
 `Link_to` is of course a method used with great regularity to generate an html href link, with the added benefit of harnessing the power of `routes.rb`, as a means of future proofing against changes to url naming etc. As you can see from the docs you can throw various inputs to the method. You can provide a hash with the controller, action, and id. You can also link with the `*_path` and `*_url` methods, such as `products_path` and `product_path(@product)`. You can also simply provide the object you want to link to itself, such as `link_to @product.name, @product`.
 
 The question is, how does this simple method handle all of this? How does it take such different inputs and produce an appropriate href link in accordance with the rules found in `routes.rb`?
-
+<!-- more -->
 First, we start with the method definition found at `actionview/lib/action_view/helpers/url_helper.rb`.
 ![link_to source](/images/link_to-screenshot.png)
 Note: The `byebug` line is not normally found in the rails source. I inserted the line as a starting point for our step-by-step walkthrough of the method chain.
@@ -70,9 +70,11 @@ Next we get the url lookup method for our particular object. It does this by loo
 
 Here we go, `get_method_for_string`:
 
-    def get_method_for_string(str)
-        "#{prefix}#{str}_#{suffix}"
-    end
+{% highlight ruby %}
+def get_method_for_string(str)
+    "#{prefix}#{str}_#{suffix}"
+end
+{% endhighlight %}
 
 There we go. We finally have our `product_path`.
 

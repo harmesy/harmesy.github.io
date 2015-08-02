@@ -9,7 +9,9 @@ title: Matt Harmes
     <small>Posted on {{ post.date | date_to_string }}</small>
 
     <p class="post-content">
-      {{ post.content }}
+      {{ post.excerpt }}
     </p>
+
+    <a href="{{ post.url }}">Read more</a> | <a href="{{ post.url }}#disqus_thread">Comments</a>
   </article>
 {% endfor %}
