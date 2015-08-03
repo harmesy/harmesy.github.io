@@ -16,7 +16,7 @@ When you click on `delete` you get a nice little dropdown confirming your choice
 
 You can click OK to confirm and delete, or Cancel to halt.
 
-The question is, how does this get generated?
+The question is, how is this generated?
 <!-- more -->
 If you take a look at the generated source code you'll see something interesting.
 ![data-confirm HTML](/images/data-confirm-html.png)
