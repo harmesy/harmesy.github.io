@@ -71,3 +71,11 @@
 .post {
   margin: 40px 0;
 }
+
+.social-media, .post-info {
+  display: inline;
+}
+
+.social-media {
+  margin-left: 10px;
+}
