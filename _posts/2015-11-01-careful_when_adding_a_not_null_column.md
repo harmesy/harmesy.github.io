@@ -12,7 +12,7 @@ Happy about your work you run a quick `rake db:migrate`.
 
 If you're on PostgreSQL (or MySQL to some extent) everything goes fine. If you're running SQLite however, it's another story.
 
-{% highlight shell %}
+{% highlight bash %}
 rake aborted!
 StandardError: An error has occurred, this and all later migrations canceled:
 
