@@ -12,10 +12,12 @@ Happy about your work you run a quick `rake db:migrate`.
 
 If you're on PostgreSQL (or MySQL to some extent) everything goes fine. If you're running SQLite however, it's another story.
 
-`rake aborted!
+{% highlight shell %}
+rake aborted!
 StandardError: An error has occurred, this and all later migrations canceled:
 
-SQLite3::SQLException: Cannot add a NOT NULL column with default value NULL: ALTER TABLE "example_table" ADD "column" varchar NOT NULL`
+SQLite3::SQLException: Cannot add a NOT NULL column with default value NULL: ALTER TABLE "example_table" ADD "column" varchar NOT NULL
+{% endhighlight %}
 
 For some reason on SQLite databases you cannot add a column with a NOT NULL constraint to an existing table without setting a default value, even if there's no data in the table.
 
