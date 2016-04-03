@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Quick tip - Using "+" to automatically categorize incoming email with GMail
+comments: true
 ---
 
 If you use GMail or host your email through Google Apps for Business, there's a helpful way that you can automatically categorize incoming mail.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Careful adding a NOT NULL column to an existing database
+comments: true
 ---
 
 Here's your scenario, you have a table. You want to add a column at some point. Said column is required, and you therefore wish to ensure an appropriate value is always inserted. With Rails you add `validates :column, presence: true`. But you want to be careful, you want to ensure that you enforce domain rules in the database. Say for example the database is accessed via another application as well, you don't want to leave it up to that application to also follow the correct rules.

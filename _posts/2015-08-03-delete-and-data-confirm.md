@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Rails DELETE and data-confirm
+comments: true
 ---
 
 Rails is very public in embracing REST-style architecture as a default. Different HTTP verbs can result in different methods being triggered in your controller. In our example today we have a `purchase` with an `id` of `2`.

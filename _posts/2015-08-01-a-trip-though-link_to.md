@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Trip Through "link_to"
+comments: true
 ---
 
 Rails is a fantastic framework in so many ways. One of its "drawbacks" (and one shared but basically all other frameworks of any complexity) is the amount of "automagic" work that goes on behind the scenes. I put drawbacks in quotes because certainly hiding complexity is one of the whole points to a framework. But if you're like me, you like to understand _why_ that particular line of code worked, and what the framework is doing inside the black box.
