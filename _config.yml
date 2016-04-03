@@ -1,1 +1,37 @@
-excerpt_separator: <!-- more -->
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: rouge
+markdown: kramdown
+disqus: harmes
+google_analytics: UA-40964521-1
+title: Matt C. Harmes
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: Matt C. Harmes
+
+description: Matt C. Harmes | Barrister, Solicitor, Notary Public
+author:
+  name: Matt C. Harmes
+  email: matt@harmes.ca
+  github: harmesy
+  twitter: harmesy
+  linkedin: mattharmes
+  bio: Barrister, Solicitor, Notary Public. Startups, Tech law, Real Estate, Wills and Estates.
+  email_md5: 83ad38f1d4c46436b5ae0e43f45bd4ce
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+# set it as url of an image
+# sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
+
+BASE_PATH:
+
+gems:
+  - jekyll-paginate
